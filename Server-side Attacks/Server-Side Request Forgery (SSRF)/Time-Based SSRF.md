@@ -12,10 +12,9 @@ Let us submit the following document to the PDF application of the previous sect
 </html>
 ```
 
-![image](https://academy.hackthebox.com/storage/modules/145/img/blind_time.png)
+
 
 We can see the service took 10 seconds to respond to the request. If we submit a valid URL inside the HTML document, it will take less time to respond. Remember that `internal.app.local` was a valid internal application (that we could access through SSRF in the previous section).
 
-![image](https://academy.hackthebox.com/storage/modules/145/img/blind_time2.png)
 
 In some situations, the application may fail immediately instead of taking more time to respond. For this reason, we need to observe the time differences between requests carefully.
