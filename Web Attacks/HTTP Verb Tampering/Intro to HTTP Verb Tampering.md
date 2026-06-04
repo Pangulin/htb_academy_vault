@@ -47,35 +47,3 @@ if(preg_match($pattern, $_GET["code"])) {
 We can see that the sanitization filter is only being tested on the `GET` parameter. If the GET requests do not contain any bad characters, then the query would be executed. However, when the query is executed, the `$_REQUEST["code"]` parameters are being used, which may also contain `POST` parameters, `leading to an inconsistency in the use of HTTP Verbs`. In this case, an attacker may use a `POST` request to perform SQL injection, in which case the `GET` parameters would be empty (will not include any bad characters). The request would pass the security filter, which would make the function still vulnerable to SQL Injection.
 
 While both of the above vulnerabilities are found in public, the second one is much more common, as it is due to mistakes made in coding, while the first is usually avoided by secure web server configurations, as documentation often cautions against it. In the coming sections, we will see examples of both types and how to exploit them.
-
- [Previous](https://academy.hackthebox.com/module/134/section/1158)
-
- Mark Complete & Next
-
-[Next](https://academy.hackthebox.com/module/134/section/1175) 
-
- Cheat Sheet
-
-##### Table of Contents
-
-[Introduction to Web Attacks](https://academy.hackthebox.com/module/134/section/1158)
-
-###### HTTP Verb Tampering
-
-[Intro to HTTP Verb Tampering](https://academy.hackthebox.com/module/134/section/1159)  [Bypassing Basic Authentication](https://academy.hackthebox.com/module/134/section/1175)  [Bypassing Security Filters](https://academy.hackthebox.com/module/134/section/1178)[Verb Tampering Prevention](https://academy.hackthebox.com/module/134/section/1177)
-
-###### Insecure Direct Object References (IDOR)
-
-[Intro to IDOR](https://academy.hackthebox.com/module/134/section/1179)[Identifying IDORs](https://academy.hackthebox.com/module/134/section/1180)  [Mass IDOR Enumeration](https://academy.hackthebox.com/module/134/section/1186)  [Bypassing Encoded References](https://academy.hackthebox.com/module/134/section/1187)  [IDOR in Insecure APIs](https://academy.hackthebox.com/module/134/section/1201)  [Chaining IDOR Vulnerabilities](https://academy.hackthebox.com/module/134/section/1200)[IDOR Prevention](https://academy.hackthebox.com/module/134/section/1202)
-
-###### XML External Entity (XXE) Injection
-
-[Intro to XXE](https://academy.hackthebox.com/module/134/section/1203)  [Local File Disclosure](https://academy.hackthebox.com/module/134/section/1204)  [Advanced File Disclosure](https://academy.hackthebox.com/module/134/section/1206)  [Blind Data Exfiltration](https://academy.hackthebox.com/module/134/section/1207)[XXE Prevention](https://academy.hackthebox.com/module/134/section/1218)
-
-###### Skills Assessment
-
-  [Web Attacks - Skills Assessment](https://academy.hackthebox.com/module/134/section/1219)
-
-##### My Workstation
-
-  Interact
